@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Ajax - PHP</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a href="#" class="navbar-brand">
+            Task Application
+        </a>
+        <ul class="navbar-nav ml-auto">
+            <form class="form-inline my-2 my-lg-0">
+                <input  type="search" id="search" class="form-control mr-sm-2" placeholder="Looking for..." />
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+                Search
+            </button>
+            </form>
+        </ul> 
+    </nav>
+
+    <div class="container p-4">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="card">
+                    <div class="card-body">
+                        <form id="task-form">
+                            <div class="form-group">
+                                <input type="text" id="name" placeholder="Enter task name" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <textarea  id="description" cols="30" rows="10" class="form-control" placeholder="Task description"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block text-center">
+                                Save task
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="card my-4" id="task-result">
+                    <div class="card-body">
+                        <ul id="container"></ul>
+                    </div>
+                </div>
+                <table class="table table-bordered table-sm">
+                    <thead>
+                        <tr>
+                            <td>Register id</td>
+                            <td>Task name</td>
+                            <td>Task description</td>
+                        </tr>
+                    </thead>
+                    <tbody id="tasks">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-3.5.0.min.js"
+        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <script src="app.js" type="text/javascript"></script>
+</body>
+
+</html>
